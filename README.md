@@ -2,7 +2,9 @@
 
 #Project description 
 
-    Is a web application provides a list of items within a variety of categories as well as integrates third party user registration and authentication and allow registered users to add,edit and delete their own items and catigories.
+    Is a web application provides a list of items within a variety of categories as well as integrates 
+    third party user registration and authentication and allow registered users to add,edit and delete 
+    their own items and catigories.
 #Prerequisites to run the project:
 
     install Python.
