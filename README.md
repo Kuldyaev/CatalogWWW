@@ -1,12 +1,12 @@
 # Catalog App WWW
 
-#Project description 
+# Project description 
 
    Is a web application provides a list of items within a variety of categories as well as integrates 
    third party user registration and authentication and allow registered users to add,edit and delete 
    their own items and categories.
     
-#Prerequisites to run the project:
+# Prerequisites to run the project:
 
     1.install Python.
     2.install VirtualBox.
@@ -17,7 +17,8 @@
     7.Install oauth2client to your machine by using this command: sudo python3 -m pip install --upgrade oauth2client 
     8.set up the database to your machine by using this command: python3 database_setup.py 
     9.Populate test data to the database by using this command: python3 fillingDB.py
-    
+ 
+ # Starting Catalog App
    When vagrant is ready, now you have to input the following commands:
    "database_setup.py" will create the tables mentioned above
    "database_seeder.py" will populate the database with dummy data
