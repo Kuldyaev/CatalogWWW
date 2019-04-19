@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <div id="nav">
+           <a href="/"><h1>Catalog App</h1></a>
+        </div>
+        <div id="logo">
+            <img src="/static/img/logo.png" title="Window" alt="Window">
+        </div>
+        <div id="reg">
+            <a href="/login">
+                <div class=btn>Login</div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div id=cats>   
+            {% if var == "0"%}
+                {% for category in categories %}
+                <a href = "{{url_for('ListItems', category_id = category.id)}}"><div class=btn>{{category.name}}</div></a>
+                {% endfor %} 
+            {% else %}
+                {% for category in categories %}
+                    {% if catid == category.id %}
+                        <a href = "{{url_for('ListItems', category_id = category.id)}}"><div class=btn style="background-color: white;">{{category.name}}</div></a>
+                    {% else %}
+                        <a href = "{{url_for('ListItems', category_id = category.id)}}"><div class=btn>{{category.name}}</div></a>
+                    {% endif %}
+                {% endfor %} 
+            {% endif%}
+            
+        </div>
+        <div id=info>
+            <!--MESSAGE FLASHING EXAMPLE -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+            {% for message in messages %}
+            <li><strong>{{message}}</strong></li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+           
+            <div class=iname><h2>{{item.name}}</h2></div>
+            <div class=iprice><h2>{{item.price}}</h2></div>
+            <div class=idescription><p>{{item.description}}</p></div>
+         </div>
+    </main>
+</body>
+</html>
