@@ -29,3 +29,6 @@
     python project.py
 
 The project should be excuted and now you can browse the item catalog by going to your prefered internet browser and enter the url: http://localhost:5000/
+
+
+![demo](https://github.com/Kuldyaev/memorygame/blob/master/img/demo.gif)  
